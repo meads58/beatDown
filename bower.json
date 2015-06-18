@@ -1,0 +1,16 @@
+{
+  "name": "beatDown",
+  "version": "0.0.0",
+  "authors": [
+    "meads58 <meads109@gmail.com>"
+  ],
+  "description": "the beatdown band webpage",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

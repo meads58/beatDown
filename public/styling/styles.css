@@ -1,0 +1,46 @@
+
+body {
+  margin: 0;
+  background-color: black;
+
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+#sidebar {
+  width:300px;
+   float:right;
+   margin-left:-300px;
+  text-align:center;
+    position:relative;
+  vertical-align: right;
+  color: white;
+   height: auto;
+    width: auto\9;
+}
+
+.navbar.navbar-default {
+  border-color: black;
+  background-color: black;
+}
+.main_header {
+  position: relative;
+}
+
+.main_title {
+  color: white;
+  margin: 1%;
+  float: left;
+  position: relative;
+}
+
+.content {
+
+  background-size: 50%;
+  background-repeat:no-repeat;
+  /*width: 100%;*/
+}

@@ -5,6 +5,7 @@ body {
 }
 
 img {
+
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
@@ -15,7 +16,8 @@ img {
 }
 
 #sidebar {
-  width:300px;
+  width: 25%;
+  padding-right: 1%;
   float:right;
   margin-left:-300px;
   text-align:center;
@@ -24,6 +26,24 @@ img {
   color: white;
   height: auto;
   width: auto\9;
+}
+
+/*.bandBio {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  float: right;
+  width:  200px;
+  height: 200px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+}*/
+
+.bandCollection {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 .navbar.navbar-default {

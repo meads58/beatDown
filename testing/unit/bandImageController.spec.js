@@ -1,29 +1,35 @@
 describe('BandImageController', function() {
   beforeEach(module('BeatDown'));
 
-  var ctrl, scope;
+  var ctrl, scope, camsImgStatus;
+  var camsImgStatuss = "bandMember.camImg.showImg";
 
   beforeEach(inject(function($rootScope, $controller){
     scope = $rootScope.$new();
     ctrl = $controller('BandImageController', {$scope: scope});
+
+
   }));
 
-  it('intialises with all camImage set to false', function() {
-    expect(scope.camImg).toBe(false);
+  describe('show and hide band members', function() {
+    it('intialises with all camImage set to false', function() {
+      expect(scope.bandMember.camImg.showImg).toBe(false);
+    });
+
+    it("sets camImage to true when 'hoverIn' is called", function() {
+      expect(scope.bandMember.camImg.showImg).toBe(false);
+      scope.hoverIn('camImg');
+      expect(scope.bandMember.camImg.showImg).toBe(true);
+    });
+
+    it("sets camImage to false when 'hoverOut' is called", function() {
+      scope.hoverIn('camImg');
+      expect(scope.bandMember.camImg.showImg).toBe(true);
+      scope.hoverOut('camImg');
+      expect(scope.bandMember.camImg.showImg).toBe(false);
+    });
   });
 
-  it("sets camImage to true when 'hoverIn' is called", function() {
-    expect(scope.camImg).toBe(false);
-    scope.hoverIn('camImg');
-    expect(scope.camImg).toBe(true);
-  });
-
-  it("sets camImage to false when 'hoverOut' is called", function() {
-    scope.hoverIn('camImg');
-    expect(scope.camImg).toBe(true);
-    scope.hoverOut('camImg');
-    expect(scope.camImg).toBe(false);
-  })
 
   it('increments the vote value by one when clicked', function() {
     var currentCount = scope.votes;

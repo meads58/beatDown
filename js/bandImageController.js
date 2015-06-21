@@ -16,7 +16,11 @@ beatDown.controller('BandImageController', ['$scope', function($scope) {
   $scope.voter = {'votes': 0, 'votedAleady': false}
 
   $scope.hoverIn = function(band) {
+    console.log('in ' + $scope.bandMember[band].showImg)
     $scope.bandMember[band].showImg = true
+
+    console.log('out ' + $scope.bandMember[band].showImg)
+     return $scope.bandMember[band].showImg
   };
 
   $scope.hoverOut = function(band) {

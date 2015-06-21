@@ -13,7 +13,25 @@
 </head>
 
 <body ng-controller="BandImageController as bandCtrl">
+
   <header id="top" class="main_header">
+    <nav class="navbar navbar-default">
+      <h1 class="main_title">Beat Down</h1>
+      <div class="bandMembers">
+        <ul class="pagination">
+          <li><a href="#" id="camster" href ng-mouseenter="hoverIn('camImg')" ng-mouseleave="hoverOut('camImg')">Cam</a></li>
+          <li><a href="#" id="pie" href ng-mouseenter="hoverIn('pieImg')" ng-mouseleave="hoverOut('pieImg')">Pie</a></li>
+          <li><a href="#" id="tooHotty" href ng-mouseenter="hoverIn('tooHotImg')" ng-mouseleave="hoverOut('tooHotImg')">TooHotty</a></li>
+          <li><a href="#" id="sotham" href ng-mouseenter="hoverIn('sothamImg')" ng-mouseleave="hoverOut('sothamImg')">Sotham</a></li>
+          <li><a href="#" id="ryan" href ng-mouseenter="hoverIn('ryanImg')" ng-mouseleave="hoverOut('ryanImg')">Ryan</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+
+<!--   <header id="top" class="main_header">
     <nav class="navbar navbar-default">
       <h1 class="main_title">Beat Down</h1>
       <div class="bandMembers">
@@ -23,17 +41,17 @@
         <a id="sotham" href ng-mouseenter="hoverIn('sothamImg')" ng-mouseleave="hoverOut('sothamImg')">Sotham</a>
         <a id="ryan" href ng-mouseenter="hoverIn('ryanImg')" ng-mouseleave="hoverOut('ryanImg')">Ryan</a>
       </div>
-
     </nav>
-  </header>
-  <div class="container">
-    <div class="row">
-    <div class="col-xs-14 col-sm-8 col-lg-9">
-      <img src="/images/drum.jpg" alt="">
-    </div>
+  </header> -->
 
-      <div "col-xs-4 col-lg-3">
-        <aside id="sidebar">
+  <div class="container-fluid">
+    <div class="row">
+     <div class="row-same-height row-full-height">
+      <div class="col-xs-10 col-sm-8 col-lg-9 col-centered col-xs-height col-full-height bluebk">
+        <img class="mainImage" src="/images/drum.jpg" alt="">
+      </div>
+
+      <div class="col-xs-2 col-sm-3 col-lg-3 col-xs-height col-full-height redbk">
           <h1 id="tour">
             Tour Dates
           </h1>
@@ -42,16 +60,16 @@
             <h2>{{votes}}</h2>
           </article>
           <div class="bandCollection">
+
             <article class="bandBio" ng-show="bandMember.camImg.showImg" >
               <img class="img-responsive img-rounded" ng-src="/images/milnes.jpg" >
-              <h2>Hi there</h2>
             </article>
             <article class="bandBio" ng-show="bandMember.pieImg.showImg">
               <img class="img-responsive img-rounded" ng-src="/images/pie.jpg">
             </article>
             <article class="bandBio" ng-show="bandMember.tooHotImg.showImg">
               <img class="img-responsive img-rounded" ng-src="/images/tooHotty.jpg">
-              </article>
+            </article>
             <article class="bandBio" ng-show="bandMember.sothamImg.showImg">
               <img class="img-responsive img-rounded" ng-src="/images/sotham2.jpg">
             </article>
@@ -59,7 +77,7 @@
               <img class="img-responsive img-rounded" ng-src="/images/ryan.jpg" >
             </article>
           </div>
-        </aside>
+        </div>
       </div>
     </div>
   </div>
